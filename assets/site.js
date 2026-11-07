@@ -29,11 +29,13 @@
     var a = e.target.closest('a[href^="#"]'); if (!a) return;
     var id = a.getAttribute('href'); if (id.length < 2) return;
     var el = document.querySelector(id); if (!el) return;
+    if (a.classList.contains('skip')) { el.setAttribute('tabindex', '-1'); el.focus(); return; }
     e.preventDefault();
     var off = -(parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 64) - 20;
     if (lenis) lenis.scrollTo(id === '#top' ? 0 : el, { offset: id === '#top' ? 0 : off });
     else window.scrollTo({ top: id === '#top' ? 0 : el.getBoundingClientRect().top + scrollY + off, behavior: 'smooth' });
     history.replaceState(null, '', id);
+    if (id !== '#top') { if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true }); }
   });
 
   // signature moment (home only): the two brand cards deal in, then fan apart on scroll

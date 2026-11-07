@@ -140,7 +140,7 @@ a:hover .go .arr, .go:hover .arr { transform: translateX(5px); }
 .contact .links { display: flex; gap: 10px 22px; flex-wrap: wrap; font-weight: 500; }
 .contact .links a { text-decoration: none; border-bottom: 1.5px solid currentColor; padding-bottom: 2px; }
 .contact .links a:hover { border-bottom-width: 3px; }
-.copy-btn { font: 600 14px var(--body); background: transparent; color: inherit; border: 1.5px solid currentColor; border-radius: 999px; padding: 6px 14px; cursor: pointer; margin-left: 12px; vertical-align: middle; }
+.copy-btn { font: 600 14px var(--body); background: transparent; color: inherit; border: 1.5px solid currentColor; border-radius: 999px; padding: 6px 14px; cursor: pointer; margin: 6px 0 0 12px; vertical-align: middle; }
 .copy-btn:hover { background: #fff; color: var(--accent); }
 footer.foot { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
 footer.foot .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -216,3 +216,8 @@ table.tbl td:first-child { font-weight: 600; white-space: nowrap; }
 /* motion */
 @media (prefers-reduced-motion: no-preference) { .js .rv { opacity: 0; transform: translateY(18px); } }
 .results.two { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 0; }
+
+.contact :focus-visible { outline-color: #fff; }
+@media (max-width: 560px) { .copy-btn { margin-left: 0; display: block; margin-top: 12px; } }
+@media print { .rv { opacity: 1 !important; transform: none !important; } .nav, .skip { display: none; } .stack .card, .stack .tag { transform: none !important; opacity: 1 !important; } }
+[tabindex="-1"]:focus { outline: none; }

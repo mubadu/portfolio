@@ -15,7 +15,7 @@
 <meta property="og:title" content="Who the Limit Rewards · Basim Durrani">
 <meta property="og:description" content="A policy audit of how a Taiwanese card issuer sets credit limits, across 30,000 customer records, and what 86% undocumented data does to the answer.">
 <meta property="og:url" content="https://mubadu.github.io/portfolio/uni/credit-limit-audit.html">
-<meta property="og:image" content="https://mubadu.github.io/portfolio/assets/og-image.png?v=3">
+<meta property="og:image" content="https://mubadu.github.io/portfolio/assets/og-image.png?v=4">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,10 +38,10 @@
 </div></header>
 <section class="tight"><div class="wrap stack-g">
   <figure class="rv"><div class="browser"><div class="bar" aria-hidden="true"><i></i><i></i><i></i><span>Credit limit assignment policy audit</span></div><img src="../assets/uni/credit-dashboard.webp" alt="The interactive dashboard: filters for sex, education, marital status and age band above default rate and client share by credit limit band" width="1440" height="900"></div></figure>
-  <div class="actions rv"><a class="btn primary" href="../uni/credit-dashboard.html" target="_blank" rel="noopener">Try the interactive dashboard <span class="arr" aria-hidden="true">↗</span></a></div>
+  <div class="actions rv"><a class="btn primary" href="../uni/credit-dashboard.html">Try the interactive dashboard <span class="arr" aria-hidden="true">→</span></a></div>
   <div class="results rv">
     <div><b>30,000</b><span>customer records audited</span></div>
-    <div><b>86%</b><span>carried codes the documentation never defined</span></div>
+    <div><b>86.5%</b><span>carried codes the documentation never defined</span></div>
     <div><b>13 pts</b><span>default-rate overstatement if those rows are deleted</span></div>
     <div><b>92.5%</b><span>final grade</span></div>
   </div>
@@ -49,7 +49,7 @@
     <div><h2 class="sec-h">What I found</h2><p class="sec-lede">The dataset claims to have no missing values. Checked against its own codebook, 86.5% of records carry repayment codes that are never defined, so the missing data passes any null check untouched.</p></div>
     <ul class="points">
       <li><b>Deleting the rows is a trap</b><span>It keeps 4,056 clients and reports a 35.4% default rate against 22.1%, because it throws away the better-paying majority.</span></li>
-      <li><b>Demographics outweigh behaviour</b><span>Holding repayment behaviour constant, education and marital status still explain more of a client's limit than their repayment record.</span></li>
+      <li><b>Demographics outweigh behaviour</b><span>Demographics add more explanatory power to a client's limit (10.6 points of R²) than repayment history does (8.8 points).</span></li>
       <li><b>Built for a decision-maker</b><span>The dashboard answers a credit risk manager's question, with every chart filterable by segment.</span></li>
       <li><b>A flag, not a verdict</b><span>Clients recorded as marital status “Other” get 41.4% lower limits. That asymmetry warrants an audit, and whether limits can safely rise is a question for a randomised trial.</span></li>
     </ul>
