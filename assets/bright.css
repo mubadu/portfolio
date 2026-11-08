@@ -204,7 +204,6 @@ figcaption { margin-top: 12px; font-size: 14.5px; color: var(--muted); }
 .gallery a { display: block; transition: transform .3s cubic-bezier(.2,.8,.2,1); }
 .gallery a:hover { transform: translateY(-3px); }
 @media (max-width: 860px) { .gallery, .gallery.three { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .gallery.two { grid-template-columns: 1fr; } }
 table.tbl { width: 100%; border-collapse: collapse; font-size: 16px; }
 table.tbl th { text-align: left; font-weight: 600; font-size: 14px; color: var(--muted); padding: 10px 14px 10px 0; border-bottom: 1px solid var(--ink); }
 table.tbl td { padding: 13px 14px 13px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
